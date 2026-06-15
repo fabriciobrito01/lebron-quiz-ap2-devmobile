@@ -1,12 +1,26 @@
-from fastapi import FastAPI
+from fastapi import FastAPI, Depends
+from sqlalchemy.orm import Session
+
+from database import SessionLocal, engine
+from models import Resultado
+from schemas import ResultadoCreate
+
+import models
+
+models.Base.metadata.create_all(bind=engine)
 
 app = FastAPI(
-    title="LeBron Legacy Quiz API",
-    version="1.0.0"
+    title="LeBron Legacy Quiz API"
 )
+
+def get_db():
+    db = SessionLocal()
+    try:
+        yield db
+    finally:
+        db.close()
+
 
 @app.get("/")
 def home():
-    return {
-        "message": "LeBron Legacy Quiz API funcionando"
-    }
+    return {"message": "API funcionando"}
