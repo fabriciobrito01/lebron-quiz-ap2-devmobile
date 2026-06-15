@@ -25,7 +25,7 @@ class HistoryAdapter(private val results: List<QuizResult>) :
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val result = results[position]
         holder.tvUser.text = result.userName
-        holder.tvScore.text = "${result.score}/${result.totalQuestions}"
+        holder.tvScore.text = "${result.score}/10"
         holder.tvClassification.text = result.classification
     }
 

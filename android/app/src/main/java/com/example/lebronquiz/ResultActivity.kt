@@ -50,7 +50,6 @@ class ResultActivity : AppCompatActivity() {
         val result = QuizResult(
             userName = userName,
             score = score,
-            totalQuestions = total,
             classification = classification
         )
 

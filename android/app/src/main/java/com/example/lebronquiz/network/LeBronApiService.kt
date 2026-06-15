@@ -1,19 +1,18 @@
 package com.example.lebronquiz.network
 
 import com.example.lebronquiz.model.QuizResult
-import com.example.lebronquiz.model.User
 import retrofit2.Call
 import retrofit2.http.Body
 import retrofit2.http.GET
 import retrofit2.http.POST
 
 interface LeBronApiService {
-    @POST("users")
-    fun registerUser(@Body user: User): Call<User>
-
-    @POST("results")
+    
+    // Alinhado com o endpoint @app.post("/resultados") do FastAPI
+    @POST("resultados")
     fun saveResult(@Body result: QuizResult): Call<QuizResult>
 
-    @GET("results")
+    // Alinhado com o endpoint @app.get("/resultados") do FastAPI
+    @GET("resultados")
     fun getHistory(): Call<List<QuizResult>>
 }
