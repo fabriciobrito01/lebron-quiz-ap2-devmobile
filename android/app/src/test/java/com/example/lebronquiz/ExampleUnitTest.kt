@@ -1,4 +1,4 @@
-package com.example.lebronlegacyquiz
+package com.example.lebronquiz
 
 import org.junit.Test
 

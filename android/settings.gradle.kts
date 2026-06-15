@@ -22,5 +22,6 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "LeBron Legacy Quiz"
+rootProject.name = "LeBron Quiz"
 include(":app")
+ 

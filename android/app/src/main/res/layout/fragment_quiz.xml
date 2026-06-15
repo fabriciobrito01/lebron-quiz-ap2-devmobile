@@ -1,14 +1,116 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".fragments.QuizFragment">
+    android:padding="24dp"
+    tools:context=".QuizFragment">
 
-    <!-- TODO: Update blank fragment layout -->
+    <com.google.android.material.progressindicator.LinearProgressIndicator
+        android:id="@+id/progressBar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        app:indicatorColor="@color/lakers_gold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:trackColor="#E0E0E0"
+        app:trackThickness="8dp" />
+
     <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:id="@+id/tvQuestionCount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Pergunta 1 de 10"
+        android:textColor="@color/text_secondary"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/progressBar" />
 
-</FrameLayout>
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cardQuestion"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="4dp"
+        app:contentPadding="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvQuestionCount">
+
+        <TextView
+            android:id="@+id/tvQuestion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:lineSpacingExtra="4dp"
+            android:text="Pergunta aqui?"
+            android:textColor="@color/text_dark"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+    </com.google.android.material.card.MaterialCardView>
+
+    <RadioGroup
+        android:id="@+id/rgOptions"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardQuestion">
+
+        <com.google.android.material.radiobutton.MaterialRadioButton
+            android:id="@+id/rbOption1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:background="@drawable/selector_option_bg"
+            android:button="@null"
+            android:padding="16dp"
+            android:text="Opção 1" />
+
+        <com.google.android.material.radiobutton.MaterialRadioButton
+            android:id="@+id/rbOption2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:background="@drawable/selector_option_bg"
+            android:button="@null"
+            android:padding="16dp"
+            android:text="Opção 2" />
+
+        <com.google.android.material.radiobutton.MaterialRadioButton
+            android:id="@+id/rbOption3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:background="@drawable/selector_option_bg"
+            android:button="@null"
+            android:padding="16dp"
+            android:text="Opção 3" />
+
+        <com.google.android.material.radiobutton.MaterialRadioButton
+            android:id="@+id/rbOption4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:background="@drawable/selector_option_bg"
+            android:button="@null"
+            android:padding="16dp"
+            android:text="Opção 4" />
+    </RadioGroup>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnNext"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:layout_marginBottom="16dp"
+        android:text="@string/btn_next"
+        app:cornerRadius="12dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="24dp"
+    tools:context=".MainActivity">
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cardImage"
+        android:layout_width="220dp"
+        android:layout_height="220dp"
+        android:layout_marginTop="48dp"
+        app:cardCornerRadius="110dp"
+        app:cardElevation="8dp"
+        app:strokeWidth="4dp"
+        app:strokeColor="@color/lakers_gold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/imgLeBron"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:contentDescription="@string/welcome_title"
+            android:scaleType="centerCrop"
+            android:src="@drawable/lebron_home" />
+    </com.google.android.material.card.MaterialCardView>
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="@string/welcome_title"
+        android:textColor="@color/lakers_purple"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardImage" />
+
+    <TextView
+        android:id="@+id/tvSubtitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Teste seus conhecimentos sobre o King James"
+        android:textColor="@color/text_secondary"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvTitle" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnStartQuiz"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="48dp"
+        android:text="@string/btn_start_quiz"
+        android:textSize="18sp"
+        app:cornerRadius="12dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvSubtitle" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnHistory"
+        style="@style/Widget.Material3.Button.TonalButton"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/btn_history"
+        app:cornerRadius="12dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnStartQuiz" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnInfo"
+        style="@style/Widget.Material3.Button.TextButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/btn_info"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnHistory" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

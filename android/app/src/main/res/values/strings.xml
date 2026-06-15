@@ -1,5 +1,20 @@
 <resources>
-    <string name="app_name">LeBron Legacy Quiz</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="app_name">LeBron Quiz</string>
+    <string name="welcome_title">LeBron James Quiz</string>
+    <string name="btn_start_quiz">Iniciar Quiz</string>
+    <string name="btn_history">Ver Histórico</string>
+    <string name="btn_info">Sobre LeBron</string>
+    <string name="register_title">Cadastro de Usuário</string>
+    <string name="hint_name">Nome</string>
+    <string name="hint_email">E-mail</string>
+    <string name="btn_submit_register">Salvar e Iniciar</string>
+    <string name="btn_next">Próxima</string>
+    <string name="result_title">Resultado Final</string>
+    <string name="score_label">Pontuação: %1$d/%2$d</string>
+    <string name="classification_label">Classificação: %1$s</string>
+    <string name="btn_back_home">Voltar ao Início</string>
+    <string name="history_title">Histórico de Tentativas</string>
+    <string name="info_title">Sobre LeBron James</string>
+    <string name="info_content">LeBron Raymone James Sr. é um basquetebolista norte-americano que atua como ala pelo Los Angeles Lakers da National Basketball Association (NBA).</string>
+    <string name="btn_open_wiki">Ler mais na Wikipedia</string>
 </resources>
