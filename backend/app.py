@@ -1,4 +1,5 @@
 from fastapi import FastAPI, Depends, HTTPException
+from fastapi.middleware.cors import CORSMiddleware
 from sqlalchemy.orm import Session
 
 from database import SessionLocal, engine
@@ -12,6 +13,14 @@ models.Base.metadata.create_all(bind=engine)
 app = FastAPI(
     title="LeBron Legacy Quiz API",
     version="1.0.0"
+)
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
 )
 
 def get_db():
@@ -50,7 +59,7 @@ def criar_resultado(
 # READ ALL
 @app.get("/resultados", response_model=list[ResultadoResponse])
 def listar_resultados(db: Session = Depends(get_db)):
-    return db.query(Resultado).all()
+    return db.query(Resultado).order_by(Resultado.id.desc()).all()
 
 
 # READ ONE
